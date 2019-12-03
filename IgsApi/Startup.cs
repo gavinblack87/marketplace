@@ -30,7 +30,7 @@ namespace IgsApi
                 (options => options.UseSqlServer(Configuration["Data:CommandAPIConnection:ConnectionString"]));
 
             services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info 
